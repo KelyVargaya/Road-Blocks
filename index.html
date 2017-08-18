@@ -4,18 +4,16 @@
 		<meta charset="UTF-8">
 		<title>Roads Blocks</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-	<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500" rel="stylesheet">
-
-	<!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+	    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="css/main.css">
 	</head>
  <body>
 	<header class="">
 		<nav>
 	    <div class="nav-wrapper container">
-	      <a href="#" class="brand-logo"><img src="assets/img/logo-white.png" alt=""></a>
+	      <a href="#" class="logo"><img src="img/logo-white.png" alt=""></a>
 	      <ul id="nav-mobile" class="right hide-on-med-and-down">
 	        <li><a href="sass.html">Drive</a></li>
 	        <li><a href="badges.html">Explore</a></li>
@@ -30,62 +28,59 @@
 				Turn Miles Into Money
 			</h2>
 			<h3>Sign up to drive lyft</h3>
-			<form action="#">
-				<input type="text" placeholder="Phone Number">
-				<a class="waves-effect waves-light btn btn-big">
-					Become a driver
-					<i class="fa fa-heart"></i>
-				</a>
-			</form>
+			<!--Avance Formulario dandole validación - Milagros Mendoza-->
+			     <form action="#" >
+                        <input id="phone-number" class="formulario_input" type="tel" pattern="[0-9]{9}" title="Ingresa 9 números" placeholder="&#128241" required >
+                        <label for="" class="formulario_label">Phone</label>
+                        <input id="name" class="formulario_input" type="text" pattern="^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\s]*)+$" title="Por favor ingresa la primera letra con mayúscula" placeholder="&#128100" required >
+                        <label for="" class="formulario_label">Name</label>
+                        <input id="email" class="formulario_input" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="Ex: example@email.com" placeholder="&#128231" required>
+                        <label for="" class="formulario_label">Email</label>
+                        <input id="city" class="formulario_input" type="text" pattern="[A-Z]{1}[a-z]+" title="Por favor ingresa la primera letra con mayúscula" placeholder="&#127968" required >
+                        <label for="" class="formulario_label">City</label>
+                   
+                       <input class="formulario_sumit2" type="submit" value="Become a driver">
+                        <input class="formulario_reset" type="reset" value="Clear">
+                    
+                </form>
+                <a id="sign-up-link" href="#">Sign Up to Ride</a>
 			<p class="small">
 				Already applied?
-				<span>Check the status of your application here.</span>
-			</p>
+				<a href="#">Check the status of your application here.</a></p>
 			<p class="small">
 				Earn money for inviting friends to drive.
-				<span> Learn more. </span>
+				<a href="#">Learn more</a>
 			</p>
 		</div>
 	</section>
 	<section class="juego">
-		<h2 class="h2-play">Play with Lyft</h2>
+		<h2 class="h2-play">Road Blocks</h2>
 		<div class="container">
 			
 			<div id="tablero">
-				<div class="row">
-					
-			    <form class="col s12">
-			      <div class="row">
-			        <div class="input-field col s6">
-			          <i class="fa fa-car prefix"></i>
-			          <input id="coord_x" type="text" class="validate" placeholder="X coordinate">
-			        </div>
-			        <div class="input-field col s6">
-			          <i class="fa fa-car prefix"></i>
-			          <input id="coord_y" type="tel" class="validate" placeholder="Y coordinate">
-			        </div>
-			      </div>
-			    </form>
-			    <a href="#" id="start-button" class="waves-effect waves-light btn-large block"> Start </a>
-			  </div>
-				
+			<img src="img/l.gif" id="img" alt="Cargando">
+
+			<button id="play">PLAY</button>
+
 			</div>	
 		</div>		
 	</section>
-	<footer class="page-footer">
+<footer class="page-footer">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="white-text">Sprint 3 - Project</h5>
-          <p class="grey-text text-lighten-4">You can custom the footer and its content</p>
+          <h5 class="white-text">Nosotras<br><p>Kely/Esther/Mily.</p></h5>
+          <p class="grey-text text-lighten-4">Creamos juegos para la divercion de muchos jovenes y niños :).
+</p>
         </div>
         <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Links</h5>
+          <h5 class="white-text">Redes Sociales</h5>
           <ul>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+          	<li id="img1"></li>
+          	<li id="img2"></li>
+          	<li id="img3"></li>
+          	<li id="img4"></li>
+          	<li id="img5"></li>
           </ul>
         </div>
       </div>
@@ -95,8 +90,10 @@
       © 2017 Lyft & Laboratoria, Inc
       <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
       </div>
+			<script src="js/main.js"></script>
     </div>
   </footer>
   <script src="js/main.js"></script>
  </body>
+ 
 </html>
